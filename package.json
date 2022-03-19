@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "create-react-app": "^5.0.0",
+    "redux": "^4.1.2"
+  },
+  "devDependencies": {
+    "react-redux": "^7.2.6",
+    "react-router-dom": "^6.2.2"
+  }
+}

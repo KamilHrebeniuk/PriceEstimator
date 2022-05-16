@@ -9,12 +9,14 @@ const Search = () => {
   const handleSubmit = (event) => {
     const url = "http://localhost:8000/apartment/";
     const data = {
-      localization: "AAA",
+      localization: "Borowska 26, Wrocław",
       measurement: area,
       rooms: room,
       heating: heating,
-      user: "AAA",
+      user: "123456789",
     };
+
+    const authorization = "Token " + "123456789"
 
     event.preventDefault();
     fetch(url, {
@@ -24,12 +26,10 @@ const Search = () => {
       credentials: "same-origin", // include, *same-origin, omit
       headers: {
         "Content-Type": "application/json",
-        // "Content-Type": "application/x-www-form-urlencoded",
+        "Authorization": authorization
       },
-      redirect: "follow", // manual, *follow, error
-      referrer: "no-referrer", // no-referrer, *client
       body: JSON.stringify(data), // body data type must match "Content-Type" header
-    }).then((r) => alert(`The name you entered was: ${area}`));
+    }).then((r) => alert(r));
   };
 
   return (

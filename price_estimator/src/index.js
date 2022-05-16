@@ -1,13 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { createRoot } from "react-dom/client";
-import ReactDOM from "react-dom";
 import "./assets/styles/index.scss";
-// import { Provider } from "react-redux";
-// import { store } from "./store";
-// import { BrowserRouter } from "react-router-dom";
 import HomePage from "./pages/homePage";
-import Popup from "reactjs-popup";
-import { ModalProvider } from "react-simple-hook-modal";
 
 export function App() {
   // return <BrowserRouter>

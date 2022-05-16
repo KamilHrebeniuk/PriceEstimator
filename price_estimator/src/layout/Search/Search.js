@@ -16,7 +16,7 @@ const Search = () => {
       user: "123456789",
     };
 
-    const authorization = "Token " + "123456789"
+    const authorization = "Token " + "123456789";
 
     event.preventDefault();
     fetch(url, {
@@ -26,7 +26,7 @@ const Search = () => {
       credentials: "same-origin", // include, *same-origin, omit
       headers: {
         "Content-Type": "application/json",
-        "Authorization": authorization
+        Authorization: authorization,
       },
       body: JSON.stringify(data), // body data type must match "Content-Type" header
     }).then((r) => alert(r));

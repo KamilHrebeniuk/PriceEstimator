@@ -2,14 +2,22 @@ import React from "react";
 import UserImage from "../../assets/icons/user.png";
 import "./Button.scss";
 
-const Button = ({ label = "Button", color = "#F05365" }) => {
+const Button = ({
+  label = "Button",
+  color = "#F05365",
+  buttonHandler = {},
+}) => {
   return (
-    <div className="buttonContainer" style={{ backgroundColor: color }}>
+    <button
+      className="buttonContainer"
+      style={{ backgroundColor: color }}
+      onClick={buttonHandler}
+    >
       <div className="buttonImageContainer">
         <img src={UserImage} alt="ButtonImage" className="buttonImage" />
       </div>
       <div className="buttonImageText">{label}</div>
-    </div>
+    </button>
   );
 };
 

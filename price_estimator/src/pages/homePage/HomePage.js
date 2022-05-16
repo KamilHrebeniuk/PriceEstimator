@@ -11,12 +11,12 @@ const HomePage = () => {
       <Background />
       <Header />
       <div className="contentLayout">
-          <div className="contentElementContainer">
-              <ContentElement />
-              <ContentElement />
-              <ContentElement />
-          </div>
-          <Search />
+        <div className="contentElementContainer">
+          <ContentElement />
+          <ContentElement />
+          <ContentElement />
+        </div>
+        <Search />
       </div>
     </>
   );

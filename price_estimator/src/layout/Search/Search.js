@@ -9,27 +9,26 @@ const Search = () => {
   const handleSubmit = (event) => {
     const url = "http://localhost:8000/apartment/";
     const data = {
-      localization: "Borowska 26, Wrocław",
+      location: "Borowska 26, Wrocław",
       measurement: area,
       rooms: room,
       heating: heating,
-      user: "123456789",
+      user: "31e845a3adc224da9293b3ff9c3f20f98268b4e9",
     };
 
-    const authorization = "Token " + "123456789";
+    //    const authorization = "Token " + "31e845a3adc224da9293b3ff9c3f20f98268b4e9";
 
     event.preventDefault();
     fetch(url, {
-      method: "POST", // *GET, POST, PUT, DELETE, etc.
-      mode: "cors", // no-cors, cors, *same-origin
-      cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
-      credentials: "same-origin", // include, *same-origin, omit
+      method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: authorization,
+        Authorization: "Token 31e845a3adc224da9293b3ff9c3f20f98268b4e9",
       },
       body: JSON.stringify(data), // body data type must match "Content-Type" header
-    }).then((r) => alert(r));
+    })
+      .then((response) => response.json())
+      .then((data) => console.log(data.data));
   };
 
   return (

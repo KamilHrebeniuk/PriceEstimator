@@ -21,8 +21,11 @@ const Header = () => {
 
     fetch(url, {
       method: "POST", // *GET, POST, PUT, DELETE, etc.
+      headers: {
+        "Content-Type": "application/json",
+      },
       body: JSON.stringify(data), // body data type must match "Content-Type" header
-    }).then((r) => alert("Zalogowano" + r.token));
+    }).then((r) => alert("Zalogowano"));
   };
 
   const register = () => {
@@ -39,6 +42,9 @@ const Header = () => {
 
     fetch(url, {
       method: "POST", // *GET, POST, PUT, DELETE, etc.
+      headers: {
+        "Content-Type": "application/json",
+      },
       body: JSON.stringify(data), // body data type must match "Content-Type" header
     }).then((r) => alert("Zarejestrowano"));
   };
